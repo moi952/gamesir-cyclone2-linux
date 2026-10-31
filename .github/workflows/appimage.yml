@@ -22,14 +22,14 @@ jobs:
           python -m build --wheel
           cp -r packaging/appimage recipe
           echo "$PWD/$(ls dist/*.whl)" > recipe/requirements.txt
-      - name: Pin appimagetool 13
+      - name: Pin appimagetool 1.9.0
         # python-appimage fetches the "continuous" appimagetool, which now rejects the broken .DirIcon
         # symlink python-appimage leaves behind; pre-fill its cache with the last tolerant release
         run: |
           cache="$HOME/.cache/python-appimage/bin"
           mkdir -p "$cache" /tmp/appimagetool
           curl -fsSL -o /tmp/appimagetool/appimagetool \
-            https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
+            https://github.com/AppImage/appimagetool/releases/download/1.9.0/appimagetool-x86_64.AppImage
           chmod +x /tmp/appimagetool/appimagetool
           (cd /tmp/appimagetool && ./appimagetool --appimage-extract >/dev/null)
           cp -r /tmp/appimagetool/squashfs-root "$cache/.appimagetool-continuous.appdir.x86_64"
