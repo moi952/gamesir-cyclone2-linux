@@ -7,8 +7,8 @@ SECTIONS = [("Botões", "buttons"), ("Analógicos", "sticks"), ("Gatilhos", "tri
 # every button the drawing shows and the profile stores
 BUTTONS = keys.BUTTONS + keys.PADDLES + keys.TRIGGERS
 # remap choices: "" keeps the button's own function; "None" disables it
-# combination ("+" joins up to 3 keys sent together): Shift+Ctrl+Tab opens the Steam overlay, even with a game running
-SHORTCUTS = [("KB_LSHIFT+KB_LCTRL+KB_TAB", "Menu rápido Steam")]
+# combination ("+" joins up to 3 keys sent together): Tab+Ctrl+Shift opens the Steam overlay, even with a game running
+SHORTCUTS = [("KB_TAB+KB_LCTRL+KB_LSHIFT", "Menu rápido Steam")]
 TARGETS = ([("", "Padrão")] + [(k, k) for k in keys.TARGETS if k != "None"] + SHORTCUTS
            + [("None", "Desativar")])
 
