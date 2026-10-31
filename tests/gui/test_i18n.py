@@ -59,7 +59,7 @@ def test_missing_translation_falls_back_to_english(monkeypatch):
 
 
 def test_steam_shortcut_target_is_a_valid_key_combination():
-    assert [v for v, _t in catalog.SHORTCUTS] == ["KB_LCTRL+KB_LSHIFT+KB_TAB"]
+    assert [v for v, _t in catalog.SHORTCUTS] == ["KB_LALT+KB_LCTRL+KB_TAB"]
     for value, label in catalog.SHORTCUTS:
         assert (value, label) in catalog.TARGETS and label in EN and label in FR
         assert all(keys.code(k) for k in value.split("+")) and len(value.split("+")) <= 3
