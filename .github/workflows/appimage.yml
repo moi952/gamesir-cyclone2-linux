@@ -26,6 +26,7 @@ jobs:
         # python-appimage fetches the "continuous" appimagetool, which now rejects the broken .DirIcon
         # symlink python-appimage leaves behind; pre-fill its cache with the last tolerant release
         run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq desktop-file-utils   # 1.9.0 refuses to run without desktop-file-validate
           cache="$HOME/.cache/python-appimage/bin"
           mkdir -p "$cache" /tmp/appimagetool
           curl -fsSL -o /tmp/appimagetool/appimagetool \
