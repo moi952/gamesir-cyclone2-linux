@@ -21,7 +21,7 @@ This project follows [Semantic Versioning](https://semver.org/).
 * `c2gui`: dark window frame drawn by the app; the window manager still moves, resizes, snaps and maximises the
   window. `CYCLONE2_NATIVE_TITLEBAR=1` keeps the system title bar. Dialogs use the same style. (@moi952)
 * `c2gui`: clear, translated messages when the controller is missing, silent or not accessible. (@moi952)
-* `c2gui`: new remap choices "Home" and "Steam quick menu" (Alt+Ctrl+Tab). (@moi952)
+* `c2gui`: new remap choices "Home" and "Steam quick menu" (Shift+Ctrl+Tab). (@moi952)
 * `c2gui`: connection badge as in the 8BitDo Ultimate 2 configurator: Wi-Fi through the 2.4G dongle or a plug on
   the cable, live battery level (red at 15% or less, a bolt while charging), a red X when the controller does
   not answer; the firmware moved to the footer's corner.
